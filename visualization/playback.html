@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KMC glide · stress and recorded trajectories</title>
+<style>__KATEX_CSS__</style>
+<style>
+:root{font-family:Arial,Helvetica,sans-serif;color:#242424;background:#fff;font-size:14px}*{box-sizing:border-box}body{margin:0}header{max-width:1320px;margin:auto;padding:24px 0 16px;border-bottom:1px solid #333}header h1{font-family:Georgia,'Times New Roman',serif;font-size:29px;font-weight:normal;margin:5px 0 9px}header p{margin:0;color:#555;max-width:960px;line-height:1.5}.eyebrow{font-size:12px;color:#666}main{max-width:1368px;padding:18px 24px 32px;margin:auto}.metadata{display:flex;flex-wrap:wrap;gap:8px 22px;margin:0 0 18px}.chip{font-size:13px;font-variant-numeric:tabular-nums}.controls{border-top:1px solid #bbb;border-bottom:1px solid #bbb;padding:14px 0;margin-bottom:24px}.control-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}button,select{font:inherit;border:1px solid #aaa;background:#fff;color:#242424;border-radius:2px;padding:7px 10px}button{cursor:pointer}button:hover{background:#eee}button:disabled{opacity:.4;cursor:default}button.primary{background:#333;border-color:#333;color:#fff;min-width:75px}label{font-size:13px}label select{margin-left:5px;font-size:13px}.grow{flex:1}.clock{font-variant-numeric:tabular-nums;font-family:'DejaVu Sans Mono',monospace}.timeline{display:flex;gap:14px;align-items:center;margin-top:12px}input[type=range]{width:100%;min-width:0;accent-color:#444}.note{font-size:12px;line-height:1.5;color:#666;margin:8px 0 0}.grid{display:grid;grid-template-columns:1.15fr 1fr;gap:24px}.panel{border-top:1px solid #aaa;padding:14px 0;min-width:0}.panel h2{font-size:16px;font-weight:normal;margin:0 0 7px}.panel p{font-size:12px;color:#666;margin:0 0 8px;line-height:1.45}.stack{display:grid;gap:14px}svg[role="img"]{width:100%;height:auto;display:block;overflow:visible}svg text{font-family:Arial,Helvetica,sans-serif;fill:#555;font-size:11px}.axis{stroke:#888;stroke-width:1}.gridline{stroke:#ededed;stroke-width:1}.measured{stroke:#333;stroke-width:1.8;fill:none;stroke-linejoin:round}.predicted{stroke:#b44825;stroke-width:1.6;stroke-dasharray:6 4;fill:none}.cursor{stroke:#888;stroke-width:1;stroke-dasharray:4 3}.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:11px;color:#555}.legend>span:before{content:'';display:inline-block;width:18px;border-top:2px solid #333;margin-right:6px;vertical-align:middle}.legend .theory:before{border-top:2px dashed #b44825}.legend .selected:before{border-color:#b44825}.event-panel{margin-top:18px}.event-header{display:flex;justify-content:space-between;gap:15px;align-items:baseline}.event-values{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin:14px 0 0}.event-values dt{color:#666;font-size:11px;margin-bottom:4px}.event-values dd{font-size:14px;font-variant-numeric:tabular-nums;margin:0;overflow-wrap:anywhere}.math{padding:9px 0;font-size:13px;margin-top:10px;line-height:1.6}.barrier-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:12px}.barrier{padding:8px 0;font-size:12px;border-bottom:1px solid #ccc}.barrier strong{display:block;font-size:19px;font-weight:normal;margin:5px 0}footer{font-size:12px;color:#666;margin-top:16px;padding-top:12px;border-top:1px solid #bbb;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}a{color:#333;text-underline-offset:3px}#warning{padding:10px;margin:10px 0;border:1px solid #b44825;font-size:13px}.stress-control{padding:0 0 14px;margin:0 0 14px;border-bottom:1px solid #ddd}.stress-row{display:flex;align-items:center;gap:16px}.stress-row label{white-space:nowrap}.stress-row output{min-width:75px;white-space:nowrap;font-size:17px;font-variant-numeric:tabular-nums}.stress-scale{display:flex;justify-content:space-between;font-size:11px;color:#777;margin-top:4px;padding-left:140px;padding-right:90px}.assumptions{margin-top:10px!important}[hidden]{display:none!important}@media(max-width:1368px){header{margin:0 24px}}@media(max-width:850px){.grid{grid-template-columns:1fr}.event-values{grid-template-columns:repeat(2,1fr)}main{padding:14px}.grow{display:none}header{margin:0 14px;padding-top:20px}.clock{width:100%;margin-top:5px}.stress-row{flex-wrap:wrap;gap:10px}.stress-row label{width:100%}.stress-row input{flex:1}.stress-scale{padding-left:0}.event-header{flex-wrap:wrap}}@media print{.controls{display:none}.grid{gap:10px}.panel{break-inside:avoid}main{padding:0}}
+
+.katex{font-size:1.08em}.katex-display{margin:0;text-align:left}.math{font-size:15px;line-height:1.5;margin-top:14px;padding:0}.equation{margin:12px 0}.math .note{margin:6px 0 0}.equation-steps{display:flex;flex-wrap:wrap;align-items:center;gap:14px 8px;padding:8px 0}.equation-steps>[hidden]{display:none}.barrier strong .katex{font-size:1em}.barrier .per-segment{display:block;color:#666;font-size:11px;margin-top:5px}.legend{align-items:center}.legend .theory .katex{font-size:1.1em}.event-values dd .katex{font-size:1.05em}.assumptions .katex{font-size:1.08em}.katex-display{margin:0;text-align:left}.event-panel .math{margin-top:20px}.stack{align-content:start}.panel p.assumptions{margin-top:18px!important}@media(max-width:450px){.math{font-size:14px}.event-values{column-gap:10px}.event-values dd{font-size:12px}}
+</style>
+</head>
+<body>
+<header><div class="eyebrow">MSE454 / KMC glide / Version 0.1</div>
+<h1>Stress and glide trajectories</h1><p>Dots show actual segment positions. Each jump comes from the event log; positions stay fixed during the recorded waiting times.</p></header>
+<main>
+<div class="metadata" id="metadata"></div>
+<div id="warning" hidden></div>
+<section class="controls" aria-label="Playback controls">
+ <div id="stress-control" class="stress-control" hidden>
+  <div class="stress-row"><label for="stress">Resolved shear stress <span data-tex="\tau"></span></label><input id="stress" type="range" min="0" max="0" step="1" value="0" aria-describedby="stress-note"><output id="stress-value" for="stress"></output></div>
+  <div class="stress-scale"><span id="stress-min"></span><span>0 MPa</span><span id="stress-max"></span></div>
+  <p class="note" id="stress-note">Each setting selects a separate Python KMC run at constant stress and resets playback. Negative stress favors leftward hops. Same seed and event count at every setting; no interpolation between runs.</p>
+ </div>
+ <div class="control-row">
+  <button id="play" class="primary">Play</button><button id="reset">Reset</button>
+  <button id="previous" title="Go to the state before the last event">Previous event</button><button id="next">Next event</button>
+  <label>Mode <select id="mode"><option value="time">Physical time</option><option value="event">Event by event</option></select></label>
+  <label id="duration-label">Clock (µs / playback s) <select id="duration"><option value="0.001">0.001</option><option value="0.01">0.01</option><option value="0.1">0.1</option><option value="1" selected>1</option><option value="10">10</option></select></label>
+  <label id="rate-label" hidden>Events/s <select id="event-rate"><option>1</option><option selected>5</option><option>20</option></select></label>
+  <span class="grow"></span><span class="clock" id="clock"></span>
+ </div>
+ <div class="timeline"><label for="seek">Seek</label><input id="seek" type="range" min="0" max="1" step="any" value="0" aria-label="Simulation progress"><span id="counter" style="white-space:nowrap;font-size:12px"></span></div>
+ <p class="note" id="timing-note"></p>
+</section>
+<div class="grid">
+ <section class="panel"><h2>Segment positions</h2><p>Each row identifies one independent segment. The vertical axis is an ID, not a physical direction. Select a dot to inspect its trajectory.</p>
+  <svg id="positions" viewBox="0 0 700 480" role="img" aria-label="Recorded segment positions along the glide direction"></svg>
+  <div class="legend"><span>Recorded position</span><span class="selected">Selected segment</span></div>
+  <p class="note">The outlined dot is the segment that moved in the last event. No line tension, obstacles, or connection between segments is present in this version.</p>
+  <div class="barrier-grid"><div class="barrier">Forward barrier<strong id="barrier-forward"></strong><span id="rate-forward"></span><span class="per-segment">per segment</span></div><div class="barrier backward">Backward barrier<strong id="barrier-backward"></strong><span id="rate-backward"></span><span class="per-segment">per segment</span></div></div>
+  <div class="math">
+   <div class="equation" id="stress-work"></div>
+   <div class="equation" id="barrier-law-forward"></div>
+   <div class="equation" id="barrier-law-backward"></div>
+   <p class="note">Stress is uniform and fixed during each run.</p>
+  </div>
+  <div class="math">
+   <div class="equation" id="rate-math"></div>
+   <div class="equation" id="forward-probability"></div>
+   <p class="note">Probability that the next hop is forward, summed over all segments.</p>
+  </div>
+  <p class="assumptions"><span id="assumed-barrier"></span>, <span id="assumed-volume"></span>, and <span id="assumed-frequency"></span> are assumed inputs from the starting code. They have not been calibrated for Ni. Stress acts through the hopping barriers; there is no mechanical loading calculation.</p>
+ </section>
+ <div class="stack">
+  <section class="panel"><h2>Mean displacement</h2><p>The staircase is the recorded mean. The dashed line is the ensemble expectation from the same rates.</p>
+   <svg id="mean-chart" viewBox="0 0 620 260" role="img" aria-label="Mean displacement against physical time"></svg>
+   <div class="legend"><span>Recorded mean</span><span class="theory"><span data-tex="\langle x(t)\rangle=h(r_+-r_-)t"></span></span></div>
+  </section>
+  <section class="panel"><div class="event-header"><h2>Selected segment</h2><label>Segment <select id="segment"></select></label></div><p>Exact jumps and waiting periods for this segment, on the same physical clock.</p>
+   <svg id="segment-chart" viewBox="0 0 620 230" role="img" aria-label="Selected segment displacement against physical time"></svg>
+  </section>
+ </div>
+</div>
+<section class="panel event-panel">
+ <div class="event-header"><h2 id="event-title">Initial state</h2><span id="direction" style="font-size:13px"></span></div>
+ <dl class="event-values">
+  <div><dt>Event time</dt><dd id="event-time">—</dd></div><div><dt>Waiting time <span data-tex="\Delta t"></span></dt><dd id="wait">—</dd></div>
+  <div><dt>Moved segment</dt><dd id="moved">—</dd></div><div><dt>Position before → after</dt><dd id="jump">—</dd></div>
+  <div><dt>Total escape rate <span data-tex="R"></span></dt><dd id="total-rate">—</dd></div><div><dt>Probability of this specific event</dt><dd id="event-probability">—</dd></div>
+  <div><dt>Random draw for time / event</dt><dd id="randoms">—</dd></div><div><dt>Net displacement / elapsed time</dt><dd id="net-velocity">—</dd></div>
+ </dl>
+ <div class="math" id="wait-math">
+  <div class="equation-steps"><span id="wait-equation" data-tex="\Delta t=-\frac{\ln u_t}{R}"></span><span id="wait-substitution" hidden></span><span id="wait-result" hidden></span></div>
+  <p class="note" id="wait-note">Step to an event to inspect its waiting-time calculation.</p>
+ </div>
+</section>
+<footer><span>All trajectories were generated by Python KMC. Downloads below follow the selected stress.</span><span><a href="#" id="download-events">Selected events (CSV)</a> · <a href="#" id="download-trace">Selected trace (JSON)</a> · <a href="overview.png" id="overview-link">Reference verification plots</a></span></footer>
+</main>
+<script>__KATEX_JS__</script>
+<script id="trace-data" type="application/json">__TRACE_DATA__</script>
+<script>
+'use strict';
+const payload=JSON.parse(document.getElementById('trace-data').textContent);
+const runs=payload.runs||[payload];
+let trace,p,events,times,means,end,plotEnd,count,positions,positionDomain,meanChart;
+const $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg';
+
+let index=0, time=0, selected=0, running=false, frame=null, previousWall=0, eventFraction=0;
+const tex=String.raw;
+function sciTex(x,d=3){
+ if(!Number.isFinite(x))return tex`\text{undefined}`;
+ if(x===0)return '0';
+ const [mantissa,exponent]=x.toExponential(d).split('e');
+ return tex`${mantissa}\times 10^{${Number(exponent)}}`;
+}
+function math(target,formula){
+ const element=typeof target==='string'?$(target):target;
+ // Event fields often stay constant over many frames; only typeset changed values.
+ if(element.dataset.renderedTex===formula)return;
+ katex.render(formula,element,{displayMode:element.matches('.equation,.equation-steps>span'),throwOnError:true,trust:false,strict:'error',output:'htmlAndMathml'});
+ element.dataset.renderedTex=formula;
+}
+for(const element of document.querySelectorAll('[data-tex]'))math(element,element.dataset.tex);
+const nm=x=>(x*1e9).toFixed(4)+' nm';
+const us=x=>(x*1e6).toFixed(5)+' µs';
+function svgNode(tag,attrs={},text){const e=document.createElementNS(NS,tag);for(const[k,v]of Object.entries(attrs))e.setAttribute(k,v);if(text!==undefined)e.textContent=text;return e;}
+function add(svg,tag,attrs,text){const e=svgNode(tag,attrs,text);svg.append(e);return e;}
+function domain(values,minPadding=0.1){let low=Math.min(...values),high=Math.max(...values);const pad=Math.max((high-low)*.09,minPadding);return[low-pad,high+pad];}
+// Do not spread arbitrarily long traces into function arguments.
+function rangeOf(values){let low=Infinity,high=-Infinity;for(const v of values){low=Math.min(low,v);high=Math.max(high,v);}const pad=Math.max((high-low)*.09,p.hop_distance_m*1e9*2);return[low-pad,high+pad];}
+const scatter=$('positions'),dots=[];
+const sx=x=>65+(x-positionDomain[0])/(positionDomain[1]-positionDomain[0])*610;
+const sy=i=>420-(p.num_segments===1?195:i/(p.num_segments-1)*390);
+function buildScatter(){
+ scatter.replaceChildren();dots.length=0;$('segment').replaceChildren();
+ add(scatter,'line',{x1:65,x2:675,y1:435,y2:435,class:'axis'});
+for(let tick=0;tick<=5;tick++){const val=positionDomain[0]+tick/5*(positionDomain[1]-positionDomain[0]),x=sx(val);add(scatter,'line',{x1:x,x2:x,y1:25,y2:435,class:'gridline'});add(scatter,'text',{x,y:452,'text-anchor':'middle'},val.toFixed(1));}
+add(scatter,'text',{x:370,y:475,'text-anchor':'middle'},'Glide position x (nm)');
+add(scatter,'text',{x:16,y:230,transform:'rotate(-90 16 230)','text-anchor':'middle'},'Segment ID');
+
+for(let i=0;i<p.num_segments;i++){
+ const y=sy(i);add(scatter,'line',{x1:65,x2:675,y1:y,y2:y,class:'gridline'});
+ if(p.num_segments<=35||i%Math.ceil(p.num_segments/25)===0)add(scatter,'text',{x:53,y:y+4,'text-anchor':'end'},i);
+ const dot=add(scatter,'circle',{cx:sx(0),cy:y,r:4.6,fill:'#333333',tabindex:0,role:'button','aria-label':'Select segment '+i});
+ dot.append(svgNode('title',{},'Segment '+i));dot.addEventListener('click',()=>selectSegment(i));dot.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectSegment(i);}});dots.push(dot);
+ $('segment').add(new Option(String(i),String(i)));
+}
+}
+function makeChart(id,values,withTheory,height){
+ const svg=$(id);svg.replaceChildren();const left=65,right=601,top=18,bottom=height-44;
+ const relevant=withTheory?[...values,0,p.analytic_velocity_m_s*plotEnd*1e9]:values;
+ const [lo,hi]=rangeOf(relevant),x=t=>left+t/plotEnd*(right-left),y=v=>bottom-(v-lo)/(hi-lo)*(bottom-top);
+ for(let i=0;i<=4;i++){
+  const t=i/4*plotEnd,yy=lo+i/4*(hi-lo);
+  add(svg,'line',{x1:x(t),x2:x(t),y1:top,y2:bottom,class:'gridline'});add(svg,'text',{x:x(t),y:bottom+17,'text-anchor':'middle'},(t*1e6).toFixed(2));
+  add(svg,'line',{x1:left,x2:right,y1:y(yy),y2:y(yy),class:'gridline'});add(svg,'text',{x:left-8,y:y(yy)+4,'text-anchor':'end'},yy.toFixed(1));
+ }
+ add(svg,'text',{x:(left+right)/2,y:height-3,'text-anchor':'middle'},'Physical time (µs)');
+ add(svg,'text',{x:15,y:(top+bottom)/2,transform:`rotate(-90 15 ${(top+bottom)/2})`,'text-anchor':'middle'},'Displacement (nm)');
+ const defs=add(svg,'defs'),clip=add(defs,'clipPath',{id:id+'-clip'}),clipRect=add(clip,'rect',{x:left-1,y:0,width:1,height});
+ if(withTheory)add(svg,'path',{d:`M${x(0)},${y(0)} L${x(plotEnd)},${y(p.analytic_velocity_m_s*plotEnd*1e9)}`,class:'predicted'});
+ let path=`M${x(0)},${y(values[0])}`;
+ for(let i=1;i<times.length;i++)path+=` H${x(times[i])} V${y(values[i])}`;
+ path+=` H${x(plotEnd)}`;
+ add(svg,'path',{d:path,class:'measured','clip-path':`url(#${id}-clip)`});
+ const cursor=add(svg,'line',{x1:left,x2:left,y1:top,y2:bottom,class:'cursor'}),marker=add(svg,'circle',{cx:left,cy:y(values[0]),r:4,fill:withTheory?'#333333':'#b44825'});
+ return{update(t,n){clipRect.setAttribute('width',Math.max(1,x(t)-left+1));cursor.setAttribute('x1',x(t));cursor.setAttribute('x2',x(t));marker.setAttribute('cx',x(t));marker.setAttribute('cy',y(values[n]));}};
+}
+
+let segmentChart;
+function selectSegment(id){selected=id;$('segment').value=String(id);let position=trace.initial_positions_m[id],values=[position*1e9];for(const e of events){if(e.segment_id===id)position=e.position_after_m;values.push(position*1e9);}segmentChart=makeChart('segment-chart',values,false,230);render();}
+function eventCountAt(t){let low=0,high=count;while(low<high){const mid=Math.ceil((low+high)/2);if(times[mid]<=t)low=mid;else high=mid-1;}return low;}
+function applyTo(n){while(index<n){const e=events[index++];positions[e.segment_id]=e.position_after_m;}while(index>n){const e=events[--index];positions[e.segment_id]=e.position_before_m;}}
+function seekTime(t){time=Math.min(end,Math.max(0,t));applyTo(eventCountAt(time));render();}
+function seekEvent(n){n=Math.max(0,Math.min(count,Math.round(n)));applyTo(n);time=times[n];render();}
+function stop(){running=false;if(frame!==null)cancelAnimationFrame(frame);frame=null;$('play').textContent='Play';}
+function render(){
+ const e=index?events[index-1]:null;
+ for(let i=0;i<dots.length;i++){const dot=dots[i];dot.setAttribute('cx',sx(positions[i]*1e9));dot.setAttribute('fill',i===selected?'#b44825':'#333333');dot.setAttribute('r',i===selected?5.8:4.6);dot.setAttribute('stroke',e&&e.segment_id===i?'#777777':'none');dot.setAttribute('stroke-width',2.4);dot.firstChild.textContent=`Segment ${i}: ${nm(positions[i])}`;}
+ meanChart.update(time,index);if(segmentChart)segmentChart.update(time,index);
+ $('clock').textContent=us(time);$('clock').dataset.timeS=time;
+ $('counter').textContent=`${index} / ${count} events`;$('seek').value=$('mode').value==='time'?(end?time/end:0):(count?index/count:0);
+ $('previous').disabled=index===0;$('next').disabled=index===count;$('play').disabled=count===0;
+ const mode=$('mode').value;
+ $('duration-label').hidden=mode!=='time';$('rate-label').hidden=mode!=='event';
+ $('timing-note').textContent=mode==='time'?`1 s of playback = ${Number($('duration').value)} µs of simulation. This clock scale stays fixed when stress changes. Plot axes rescale for each run. Fast runs can finish within one frame; reduce the clock scale or step through events.`:'Event stepping pauses at recorded event times. Equal playback intervals do not represent equal physical waiting times.';
+ $('event-title').textContent=e?`Last event: ${e.event}`:'Initial state';$('direction').textContent=e?(e.direction===1?'Forward hop (+h)':'Backward hop (−h)'):'';
+ $('event-time').textContent=e?us(e.time_s):'—';math('wait',e?tex`${sciTex(e.dt_s)}\,\mathrm{s}`:tex`\text{—}`);
+ $('moved').textContent=e?e.segment_id:'—';$('jump').textContent=e?`${(e.position_before_m*1e9).toFixed(4)} → ${(e.position_after_m*1e9).toFixed(4)} nm`:'—';
+ const total=e?e.total_rate_s1:p.num_segments*(p.rate_forward_s1+p.rate_backward_s1);
+ math('total-rate',tex`${sciTex(total)}\,\mathrm{s}^{-1}`);$('event-probability').textContent=e?(e.selected_rate_s1/total).toPrecision(5):'—';
+ $('randoms').textContent=e?`${e.u_time.toFixed(5)} / ${e.u_event.toFixed(5)}`:'—';
+ math('net-velocity',time>0?tex`${sciTex((e?e.mean_position_m:0)/time)}\,\mathrm{m}\,\mathrm{s}^{-1}`:tex`\text{—}`);
+ $('wait-substitution').hidden=!e;$('wait-result').hidden=!e;
+ if(e){
+  math('wait-substitution',tex`=\frac{-\ln(${e.u_time.toPrecision(7)})}{${sciTex(total,5)}\,\mathrm{s}^{-1}}`);
+  math('wait-result',tex`=${sciTex(e.dt_s,6)}\,\mathrm{s}`);
+ }
+ $('wait-note').textContent=e?'Displayed values are rounded; the event log retains full precision.':'Step to an event to inspect its waiting-time calculation.';
+}
+function tick(now){
+ if(!running)return;const elapsed=(now-previousWall)/1000;previousWall=now;
+ if($('mode').value==='time')seekTime(time+elapsed*Number($('duration').value)*1e-6);
+ else{eventFraction+=elapsed*Number($('event-rate').value);const steps=Math.floor(eventFraction);if(steps){eventFraction-=steps;seekEvent(index+steps);}}
+ if(index===count&&time>=end){stop();return;}frame=requestAnimationFrame(tick);
+}
+$('play').onclick=()=>{if(running){stop();return;}if(index===count)seekEvent(0);running=true;previousWall=performance.now();eventFraction=0;$('play').textContent='Pause';frame=requestAnimationFrame(tick);};
+$('reset').onclick=()=>{stop();seekEvent(0);};$('previous').onclick=()=>{stop();seekEvent(index-1);};$('next').onclick=()=>{stop();seekEvent(index+1);};
+$('seek').oninput=()=>{stop();if($('mode').value==='time')seekTime(Number($('seek').value)*end);else seekEvent(Number($('seek').value)*count);};
+$('mode').onchange=()=>{stop();if($('mode').value==='event')seekEvent(index);else render();};
+$('duration').onchange=render;$('event-rate').onchange=render;$('segment').onchange=()=>selectSegment(Number($('segment').value));
+function loadRun(runIndex){
+ stop();trace=runs[runIndex];p=trace.parameters;events=trace.events;
+ times=[0,...events.map(e=>e.time_s)];means=[0,...events.map(e=>e.mean_position_m*1e9)];
+ end=times[times.length-1];plotEnd=end||1e-6;count=events.length;
+ positions=trace.initial_positions_m.slice();index=0;time=0;selected=0;eventFraction=0;segmentChart=null;
+ const allPositions=[...positions.map(x=>x*1e9)];for(const e of events)allPositions.push(e.position_before_m*1e9,e.position_after_m*1e9);
+ positionDomain=rangeOf(allPositions);buildScatter();meanChart=makeChart('mean-chart',means,true,260);
+ $('stress').value=runIndex;$('stress').setAttribute('aria-valuetext',p.stress_mpa+' MPa');$('stress-value').textContent=p.stress_mpa+' MPa';
+ $('metadata').replaceChildren();
+ for(const text of [`${p.temperature_k} K`,`${p.stress_mpa} MPa`,`${p.num_segments} segments`,`${count.toLocaleString()} events`,`Seed ${p.seed}`,`Hop ${(p.hop_distance_m*1e9).toFixed(4)} nm`]){const chip=document.createElement('span');chip.className='chip';chip.textContent=text;$('metadata').append(chip);}
+ math('barrier-forward',tex`${p.barrier_forward_ev.toFixed(5)}\,\mathrm{eV}`);
+ math('barrier-backward',tex`${p.barrier_backward_ev.toFixed(5)}\,\mathrm{eV}`);
+ math('rate-forward',tex`r_+=${sciTex(p.rate_forward_s1)}\,\mathrm{s}^{-1}`);
+ math('rate-backward',tex`r_-=${sciTex(p.rate_backward_s1)}\,\mathrm{s}^{-1}`);
+ const sum=p.rate_forward_s1+p.rate_backward_s1,work=p.stress_mpa*1e6*p.activation_volume_m3/1.602176634e-19;
+ math('stress-work',tex`\tau V^\ast=${work.toFixed(5)}\,\mathrm{eV}`);
+ math('barrier-law-forward',tex`E_+=\max\!\left(10^{-4}\,\mathrm{eV},\;E_0-\tau V^\ast\right)`);
+ math('barrier-law-backward',tex`E_-=E_0+\tau V^\ast`);
+ math('rate-math',tex`r_\pm=\nu_0\exp\!\left(-\frac{E_\pm}{k_{\mathrm B}T}\right)`);
+ math('forward-probability',tex`P_+=\frac{r_+}{r_++r_-}=${sum?tex`${(100*p.rate_forward_s1/sum).toFixed(3)}\%`:tex`\text{undefined}`}`);
+ math('assumed-barrier',tex`E_0=${p.barrier_zero_ev}\,\mathrm{eV}`);
+ math('assumed-volume',tex`V^\ast=${Number((p.activation_volume_m3/p.burgers_vector_m**3).toPrecision(5))}\,b^3`);
+ math('assumed-frequency',tex`\nu_0=${sciTex(p.attempt_frequency_s1,0)}\,\mathrm{s}^{-1}`);
+ $('warning').hidden=!(p.forward_barrier_floor_active||p.barrier_backward_ev<0);
+ $('warning').textContent='This run reaches the original barrier floor or a negative backward barrier. The resulting high-stress behavior is not a validated material prediction.';
+ selectSegment(0);
+}
+$('stress-control').hidden=runs.length<2;$('stress').max=runs.length-1;
+$('stress-min').textContent=runs[0].parameters.stress_mpa+' MPa';$('stress-max').textContent=runs[runs.length-1].parameters.stress_mpa+' MPa';
+$('stress').oninput=()=>loadRun(Number($('stress').value));
+function download(contents,type,name){const url=URL.createObjectURL(new Blob([contents],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+$('download-trace').onclick=e=>{e.preventDefault();download(JSON.stringify(trace)+'\n','application/json',`trace_${p.stress_mpa}MPa.json`);};
+$('download-events').onclick=e=>{e.preventDefault();const fields=events.length?Object.keys(events[0]):['event','segment_id','direction','time_s'];download([fields.join(','),...events.map(event=>fields.map(f=>event[f]).join(','))].join('\n')+'\n','text/csv',`events_${p.stress_mpa}MPa.csv`);};
+const defaultIndex=Math.max(0,runs.findIndex(r=>r.parameters.stress_mpa===payload.default_stress_mpa));
+$('overview-link').textContent=`Reference plots (${runs[defaultIndex].parameters.stress_mpa} MPa)`;
+loadRun(defaultIndex);
+// Exposes recorded state for verification and inspection, not a second simulator.
+window.kmcReplay={seekTime,seekEvent,selectSegment,stop,getState:()=>({time_s:time,event_index:index,positions_m:positions.slice(),mean_position_m:index?events[index-1].mean_position_m:0,selected_segment:selected,stress_mpa:p.stress_mpa,running}),get trace(){return trace;},availableStresses:runs.map(r=>r.parameters.stress_mpa)};
+</script>
+</body>
+</html>

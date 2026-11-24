@@ -1,0 +1,41 @@
+{
+  "reference_commit": "a7e4325e55da73c5c8cfe8f198cfd65c9121bead",
+  "reference_source_sha256": "790beb9dab95f97f7c9c825c22a78fd34175260af6d05c2ed41615226b9ddf28",
+  "criterion": "Exact equality of all times, all mean positions, final segment positions, and metrics",
+  "num_segments": 24,
+  "events_per_run": 2000,
+  "seed": 454,
+  "cases": [
+    {
+      "temperature_k": 300,
+      "stress_mpa": 0,
+      "passed": true
+    },
+    {
+      "temperature_k": 300,
+      "stress_mpa": 10,
+      "passed": true
+    },
+    {
+      "temperature_k": 300,
+      "stress_mpa": -10,
+      "passed": true
+    },
+    {
+      "temperature_k": 300,
+      "stress_mpa": 100,
+      "passed": true
+    },
+    {
+      "temperature_k": 300,
+      "stress_mpa": 200,
+      "passed": true
+    },
+    {
+      "temperature_k": 600,
+      "stress_mpa": 10,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

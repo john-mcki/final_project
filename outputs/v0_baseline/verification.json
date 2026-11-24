@@ -1,0 +1,81 @@
+{
+  "replicates": 24,
+  "events_per_run": 2000,
+  "num_segments": 24,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "criterion": "absolute error <= 4 standard errors + 1e-12 m/s",
+  "limitation": "Checks the stated stochastic model, not its physical accuracy for Ni. Fixed-event stopping gives a small finite-run ratio bias.",
+  "cases": [
+    {
+      "temperature_k": 300,
+      "stress_mpa": 0,
+      "analytic_velocity_m_s": 0.0,
+      "mean_velocity_m_s": 2.164773282465241e-06,
+      "standard_error_m_s": 3.1263435996103862e-06,
+      "z_score": 0.692429738924097,
+      "passed": true
+    },
+    {
+      "temperature_k": 300,
+      "stress_mpa": 10,
+      "analytic_velocity_m_s": 0.0005353485515016348,
+      "mean_velocity_m_s": 0.0005379363393333744,
+      "standard_error_m_s": 3.244724941573012e-06,
+      "z_score": 0.7975368878217013,
+      "passed": true
+    },
+    {
+      "temperature_k": 300,
+      "stress_mpa": -10,
+      "analytic_velocity_m_s": -0.0005353485515016348,
+      "mean_velocity_m_s": -0.0005368707136358236,
+      "standard_error_m_s": 3.539791111568817e-06,
+      "z_score": -0.43001467776276997,
+      "passed": true
+    },
+    {
+      "temperature_k": 300,
+      "stress_mpa": 100,
+      "analytic_velocity_m_s": 0.5622564904264433,
+      "mean_velocity_m_s": 0.5617202621166749,
+      "standard_error_m_s": 0.00248903124190257,
+      "z_score": -0.2154365524791573,
+      "passed": true
+    },
+    {
+      "temperature_k": 600,
+      "stress_mpa": 10,
+      "analytic_velocity_m_s": 0.21779686575460422,
+      "mean_velocity_m_s": 0.22227793205055288,
+      "standard_error_m_s": 0.002735501394028797,
+      "z_score": 1.6381151571445653,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

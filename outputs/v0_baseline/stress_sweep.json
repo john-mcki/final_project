@@ -1,0 +1,847 @@
+{
+  "simulation_code_sha256": "4002e997fb1e84ac251488d62dafe7df167c80e5d5559d5a1f5dd02759952826",
+  "passed": true,
+  "note": "Separate constant-stress Python KMC runs with the same seed; not a loading ramp or independent replicates.",
+  "cases": [
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": -100.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.5424875296420069,
+        "barrier_backward_ev": 0.15751247035799315,
+        "rate_forward_s1": 770.2125795550946,
+        "rate_backward_s1": 2258951776.727848,
+        "analytic_velocity_m_s": -0.5622564904264433,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 3.786135913668939e-08,
+        "total_displacement_m": -2.0741798914805423e-08,
+        "velocity_m_s": -0.5478355607869785,
+        "strain_rate_s1": -0.13635714048267786
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": -90.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.5232387766778062,
+        "barrier_backward_ev": 0.17676122332219385,
+        "rate_forward_s1": 1621.718328575208,
+        "rate_backward_s1": 1072857748.7144235,
+        "analytic_velocity_m_s": -0.26703559260803905,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 7.971875532759935e-08,
+        "total_displacement_m": -2.0741798914805423e-08,
+        "velocity_m_s": -0.2601871896966814,
+        "strain_rate_s1": -0.0647610044267627
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": -80.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.5039900237136055,
+        "barrier_backward_ev": 0.19600997628639452,
+        "rate_forward_s1": 3414.603197932642,
+        "rate_backward_s1": 509538875.8780286,
+        "analytic_velocity_m_s": -0.12682418493270178,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 1.6785066764856047e-07,
+        "total_displacement_m": -2.0741798914805423e-08,
+        "velocity_m_s": -0.12357293066140097,
+        "strain_rate_s1": -0.03075749854910363
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": -70.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.48474127074940476,
+        "barrier_backward_ev": 0.21525872925059522,
+        "rate_forward_s1": 7189.605490600528,
+        "rate_backward_s1": 241998406.91102993,
+        "analytic_velocity_m_s": -0.06023199802200567,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 3.534092388091203e-07,
+        "total_displacement_m": -2.0741798914805423e-08,
+        "velocity_m_s": -0.05869059616182888,
+        "strain_rate_s1": -0.014608182525344448
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": -60.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.46549251778520406,
+        "barrier_backward_ev": 0.2345074822147959,
+        "rate_forward_s1": 15138.047999770175,
+        "rate_backward_s1": 114933779.77600105,
+        "analytic_velocity_m_s": -0.028603432299417204,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 7.440436610582251e-07,
+        "total_displacement_m": -2.0741798914805423e-08,
+        "velocity_m_s": -0.027877126034922664,
+        "strain_rate_s1": -0.006938660910468625
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": -50.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.44624376482100336,
+        "barrier_backward_ev": 0.2537562351789966,
+        "rate_forward_s1": 31873.862556567827,
+        "rate_backward_s1": 54586201.21600571,
+        "analytic_velocity_m_s": -0.013578658654772516,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 1.5659104340354198e-06,
+        "total_displacement_m": -2.0741798914805423e-08,
+        "velocity_m_s": -0.013245839905002037,
+        "strain_rate_s1": -0.003296910573207087
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": -40.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.4269950118568027,
+        "barrier_backward_ev": 0.27300498814319724,
+        "rate_forward_s1": 67111.89674457345,
+        "rate_backward_s1": 25924957.562532373,
+        "analytic_velocity_m_s": -0.0064360588220381135,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 3.2905041973071845e-06,
+        "total_displacement_m": -2.0638089920231395e-08,
+        "velocity_m_s": -0.006272014464263797,
+        "strain_rate_s1": -0.0015611143537021268
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": -30.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.407746258892602,
+        "barrier_backward_ev": 0.29225374110739794,
+        "rate_forward_s1": 141307.2129761762,
+        "rate_backward_s1": 12312698.257925848,
+        "analytic_velocity_m_s": -0.00302947854681371,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 6.86743022975853e-06,
+        "total_displacement_m": -2.0285479338679705e-08,
+        "velocity_m_s": -0.002953867554529633,
+        "strain_rate_s1": -0.0007352223220442592
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": -20.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.3884975059284013,
+        "barrier_backward_ev": 0.31150249407159863,
+        "rate_forward_s1": 297528.8943939581,
+        "rate_backward_s1": 5847744.900837604,
+        "analytic_velocity_m_s": -0.00138145757207266,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 1.3917526948728542e-05,
+        "total_displacement_m": -1.916542219728021e-08,
+        "velocity_m_s": -0.001377070960083975,
+        "strain_rate_s1": -0.0003427551473457578
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": -10.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.3692487529642007,
+        "barrier_backward_ev": 0.3307512470357993,
+        "rate_forward_s1": 626460.8942093832,
+        "rate_backward_s1": 2777305.1616253015,
+        "analytic_velocity_m_s": -0.0005353485515016348,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 2.512717156510847e-05,
+        "total_displacement_m": -1.2818431729349743e-08,
+        "velocity_m_s": -0.0005101422456616401,
+        "strain_rate_s1": -0.00012697521452953193
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": 0.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.35,
+        "barrier_backward_ev": 0.35,
+        "rate_forward_s1": 1319042.4841695288,
+        "rate_backward_s1": 1319042.4841695288,
+        "analytic_velocity_m_s": 0.0,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 3.242011333179253e-05,
+        "total_displacement_m": -4.978031739553292e-10,
+        "velocity_m_s": -1.5354763534005365e-05,
+        "strain_rate_s1": -3.821825011280711e-06
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": 10.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.3307512470357993,
+        "barrier_backward_ev": 0.3692487529642007,
+        "rate_forward_s1": 2777305.1616253015,
+        "rate_backward_s1": 626460.8942093832,
+        "analytic_velocity_m_s": 0.0005353485515016348,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 2.512717156510847e-05,
+        "total_displacement_m": 1.3067333316327408e-08,
+        "velocity_m_s": 0.0005200479203346817,
+        "strain_rate_s1": 0.00012944075267573644
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": 20.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.31150249407159863,
+        "barrier_backward_ev": 0.3884975059284013,
+        "rate_forward_s1": 5847744.900837604,
+        "rate_backward_s1": 297528.8943939581,
+        "analytic_velocity_m_s": 0.00138145757207266,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 1.3917526948728542e-05,
+        "total_displacement_m": 1.8605393626580463e-08,
+        "velocity_m_s": 0.0013368318735880148,
+        "strain_rate_s1": 0.0003327395748583818
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": 30.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.29225374110739794,
+        "barrier_backward_ev": 0.407746258892602,
+        "rate_forward_s1": 12312698.257925848,
+        "rate_backward_s1": 141307.2129761762,
+        "analytic_velocity_m_s": 0.00302947854681371,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 6.867430229758533e-06,
+        "total_displacement_m": 2.0409930132168536e-08,
+        "velocity_m_s": 0.0029719894413672366,
+        "strain_rate_s1": 0.0007397328884371684
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": 40.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.27300498814319724,
+        "barrier_backward_ev": 0.4269950118568027,
+        "rate_forward_s1": 25924957.562532373,
+        "rate_backward_s1": 67111.89674457345,
+        "analytic_velocity_m_s": 0.0064360588220381135,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 3.2905041973071824e-06,
+        "total_displacement_m": 2.0679573518061008e-08,
+        "velocity_m_s": 0.006284621528513577,
+        "strain_rate_s1": 0.0015642522720010264
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": 50.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.2537562351789966,
+        "barrier_backward_ev": 0.44624376482100336,
+        "rate_forward_s1": 54586201.21600571,
+        "rate_backward_s1": 31873.862556567827,
+        "analytic_velocity_m_s": 0.013578658654772516,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 1.5659104340354196e-06,
+        "total_displacement_m": 2.072105711589062e-08,
+        "velocity_m_s": 0.013232594065097037,
+        "strain_rate_s1": 0.0032936136626338804
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": 60.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.2345074822147959,
+        "barrier_backward_ev": 0.46549251778520406,
+        "rate_forward_s1": 114933779.77600105,
+        "rate_backward_s1": 15138.047999770175,
+        "analytic_velocity_m_s": 0.028603432299417204,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 7.440436610582245e-07,
+        "total_displacement_m": 2.0741798914805423e-08,
+        "velocity_m_s": 0.02787712603492269,
+        "strain_rate_s1": 0.006938660910468631
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": 70.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.21525872925059522,
+        "barrier_backward_ev": 0.48474127074940476,
+        "rate_forward_s1": 241998406.91102993,
+        "rate_backward_s1": 7189.605490600528,
+        "analytic_velocity_m_s": 0.06023199802200567,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 3.5340923880912036e-07,
+        "total_displacement_m": 2.0741798914805423e-08,
+        "velocity_m_s": 0.058690596161828874,
+        "strain_rate_s1": 0.014608182525344446
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": 80.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.19600997628639452,
+        "barrier_backward_ev": 0.5039900237136055,
+        "rate_forward_s1": 509538875.8780286,
+        "rate_backward_s1": 3414.603197932642,
+        "analytic_velocity_m_s": 0.12682418493270178,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 1.6785066764856044e-07,
+        "total_displacement_m": 2.0741798914805423e-08,
+        "velocity_m_s": 0.123572930661401,
+        "strain_rate_s1": 0.030757498549103635
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": 90.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.17676122332219385,
+        "barrier_backward_ev": 0.5232387766778062,
+        "rate_forward_s1": 1072857748.7144235,
+        "rate_backward_s1": 1621.718328575208,
+        "analytic_velocity_m_s": 0.26703559260803905,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 7.971875532759936e-08,
+        "total_displacement_m": 2.0741798914805423e-08,
+        "velocity_m_s": 0.26018718969668136,
+        "strain_rate_s1": 0.06476100442676269
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    },
+    {
+      "parameters": {
+        "temperature_k": 300.0,
+        "stress_mpa": 100.0,
+        "num_segments": 24,
+        "requested_events": 2000,
+        "mobile_density_m2": 1000000000.0,
+        "lattice_parameter_m": 3.52e-10,
+        "burgers_vector_m": 2.4890158697766473e-10,
+        "hop_distance_m": 2.4890158697766473e-10,
+        "attempt_frequency_s1": 1000000000000.0,
+        "barrier_zero_ev": 0.35,
+        "activation_volume_m3": 3.083990223288057e-28,
+        "k_B_ev_k": 8.617333262e-05,
+        "barrier_forward_ev": 0.15751247035799315,
+        "barrier_backward_ev": 0.5424875296420069,
+        "rate_forward_s1": 2258951776.727848,
+        "rate_backward_s1": 770.2125795550946,
+        "analytic_velocity_m_s": 0.5622564904264433,
+        "seed": 454,
+        "forward_barrier_floor_active": false
+      },
+      "results": {
+        "total_time_s": 3.786135913668939e-08,
+        "total_displacement_m": 2.0741798914805423e-08,
+        "velocity_m_s": 0.5478355607869785,
+        "strain_rate_s1": 0.13635714048267786
+      },
+      "verification": {
+        "passed": true,
+        "events_reconstructed": 2000,
+        "checks": [
+          "position updates",
+          "event selection",
+          "waiting times",
+          "mean positions",
+          "final state"
+        ]
+      }
+    }
+  ]
+}

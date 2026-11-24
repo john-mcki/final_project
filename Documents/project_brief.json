@@ -1,0 +1,230 @@
+{
+  "title": "KMC Project Brief and Parameters",
+  "pages": [
+    [
+      [
+        "title",
+        "KMC dislocation glide in Ni-Fe"
+      ],
+      [
+        "subtitle",
+        "MSE454  •  Working project brief  •  Update: November 23, 2026"
+      ],
+      [
+        "callout",
+        "Main question: How do Fe-related obstacles change dislocation velocity as temperature and applied shear stress vary?"
+      ],
+      [
+        "heading",
+        "Scope"
+      ],
+      [
+        "p",
+        "Kinetic Monte Carlo (KMC) will generate every displacement and time increment. Start with independent effective segments gliding forward and backward in pure face-centered cubic (FCC) Ni, then add local barriers that depend on Fe concentration. The segments move along one slip direction and do not yet form a connected dislocation line."
+      ],
+      [
+        "p",
+        "Measure average velocity and plastic shear strain rate. Keep cross-slip, climb, precipitates, and full superalloy behavior outside the core scope."
+      ],
+      [
+        "heading",
+        "Goals and evidence"
+      ],
+      [
+        "table",
+        [
+          "Goal",
+          "What will demonstrate progress"
+        ],
+        [
+          [
+            "Verify the KMC implementation",
+            "Match the exact drift for constant rates; check zero-stress drift, stress reversal, and convergence."
+          ],
+          [
+            "Choose physical rates for Ni",
+            "Find sources for the rate parameters and identify the stress and temperature ranges where they apply."
+          ],
+          [
+            "Measure the effect of Fe",
+            "Compare velocities at matched temperature and stress, with uncertainty from repeated runs."
+          ]
+        ],
+        [
+          31,
+          69
+        ]
+      ],
+      [
+        "heading",
+        "KMC method"
+      ],
+      [
+        "step",
+        "1. Set temperature, stress, composition, segment positions, and a random seed. For Ni-Fe, generate local obstacle barriers and keep them fixed during each run."
+      ],
+      [
+        "step",
+        "2. List the allowed forward and backward hops. Assign each event a barrier and a rate:"
+      ],
+      [
+        "equation",
+        "rᵢ = νᵢ exp[−ΔGᵢ / (k_B T)]     •     R = Σᵢ rᵢ"
+      ],
+      [
+        "step",
+        "3. Choose event i with probability rᵢ/R. Advance time by Δt = −ln(u)/R, where u is an independent uniform random number in (0, 1)."
+      ],
+      [
+        "step",
+        "4. Move the selected segment, update affected rates, and record position and time. Stop at the chosen event count or simulated duration."
+      ],
+      [
+        "step",
+        "5. Calculate v = Δx̄/Δt and γ̇ = ρbv. Repeat with different seeds and, for alloys, obstacle configurations. At fixed ρ, strain rate is a rescaled velocity."
+      ],
+      [
+        "heading",
+        "Progress for the update"
+      ],
+      [
+        "p",
+        "Version 0 records every KMC event and replays the exact positions on a physical clock. Version 0.1 adds a stress slider using separate constant-stress runs. The rate law is unchanged; Fe obstacles remain planned."
+      ],
+      [
+        "p",
+        "The recorded model matches the original code exactly in six regression cases. Five analytical drift comparisons pass across 24 seeds per case. These checks verify the implementation; physical validation remains open. The Version 0 record gives the settings and results."
+      ],
+      [
+        "callout",
+        "Find sources for the physical parameters, then save a reproducible baseline comparison with uncertainty bars."
+      ]
+    ],
+    [
+      [
+        "title",
+        "Parameter sheet"
+      ],
+      [
+        "subtitle",
+        "Current values from kmc_test.py and assumptions to resolve"
+      ],
+      [
+        "p",
+        "Original example: 300 K, 10 MPa, 100 segments, 10,000 events. Playback uses 24 segments and 2,000 events. The slider spans −100 to +100 MPa to explore the assumed law; this range is not validated for Ni."
+      ],
+      [
+        "table",
+        [
+          "Parameter",
+          "Starting value",
+          "Status / decision needed"
+        ],
+        [
+          [
+            "Temperature, T",
+            "300 K",
+            "Control variable. Choose a range supported by the rate model."
+          ],
+          [
+            "Resolved shear stress, τ",
+            "10 MPa",
+            "Control variable. Convert MPa to Pa when calculating stress work."
+          ],
+          [
+            "Fe atomic fraction, c",
+            "0 (pure Ni)",
+            "Planned control variable. Define the FCC composition range; 0.5 means 50 at.% Fe."
+          ],
+          [
+            "Lattice parameter, a",
+            "0.352 nm",
+            "Code input. Confirm a Ni source and the relevant temperature."
+          ],
+          [
+            "Burgers vector, b; hop, h",
+            "b = a/√2 ≈ 0.249 nm; h = b",
+            "b follows FCC geometry. The hop length is a model assumption."
+          ],
+          [
+            "Attempt frequency, ν₀",
+            "10¹² s⁻¹",
+            "Assumed. Find a source or justify an effective prefactor."
+          ],
+          [
+            "Zero-stress barrier, E₀",
+            "0.35 eV",
+            "Unsourced assumption in the starting code. Identify the physical event and regime."
+          ],
+          [
+            "Activation volume, V*",
+            "20b³ ≈ 3.08 × 10⁻²⁸ m³",
+            "Unsourced assumption in the starting code. Check consistency with segment size and hop length."
+          ],
+          [
+            "Mobile dislocation density, ρ",
+            "10⁹ m⁻²",
+            "Assumed, held fixed. Sets the conversion from velocity to strain rate."
+          ],
+          [
+            "Segment length, L",
+            "Not defined",
+            "Define the effective segment size before interpreting stress work physically."
+          ],
+          [
+            "Local Fe barriers",
+            "Not implemented",
+            "Define how c changes local barriers. Use consistent state and transition-state energies."
+          ]
+        ],
+        [
+          27,
+          25,
+          48
+        ]
+      ],
+      [
+        "p",
+        "Record the segment count, event count or physical duration, and random seed. Increase run length until velocity estimates stabilize. For Ni-Fe, vary both the trajectory seed and the fixed obstacle configuration."
+      ],
+      [
+        "heading",
+        "Checks before interpreting the results"
+      ],
+      [
+        "p",
+        "The current barrier law is E± = E₀ ∓ τV*. Convert τV* from joules to eV. The code floors the forward barrier at 10⁻⁴ eV, reached near 182 MPa; its 20 to 200 MPa sweep crosses this artificial limit. Revise the range or rate law before interpreting high-stress results."
+      ],
+      [
+        "p",
+        "Zhao et al. [3] study pure Ni and 50 at.% Fe using molecular dynamics. Their pure-Ni temperature trend differs from this baseline. Resolve the rate law and comparison regime within KMC before claiming quantitative agreement."
+      ],
+      [
+        "p",
+        "Check that c = 0 recovers the baseline and that forward/reverse rates obey detailed balance at zero stress. Alloy results should converge across run lengths and obstacle configurations."
+      ],
+      [
+        "heading",
+        "Evidence and sources"
+      ],
+      [
+        "source",
+        "[1] kmc_test.py; original baseline commit a7e4325. Current checks: outputs/v0_baseline/verification.json and legacy_regression.json. The Version 0 record lists the run settings."
+      ],
+      [
+        "source",
+        "[2] A. F. Voter (2007), Introduction to the Kinetic Monte Carlo Method. Supplied PDF: event selection, time advancement, and detailed balance."
+      ],
+      [
+        "source",
+        "[3] S. Zhao, Y. N. Osetsky, Y. Zhang (2017), Atomic-scale dynamics of edge dislocations in Ni and concentrated solid solution NiFe alloys. doi:10.1016/j.jallcom.2017.01.165."
+      ]
+    ],
+    [
+      [
+        "version_record",
+        "v0_baseline"
+      ]
+    ]
+  ]
+}
